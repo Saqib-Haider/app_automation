@@ -24,7 +24,7 @@ def appium_driver():
     driver.quit()
 
 
-# Test case: Navigate to the login page
+
 def test_navigate_to_login(appium_driver):
     driver = appium_driver
     time.sleep(5)
@@ -36,7 +36,7 @@ def test_navigate_to_login(appium_driver):
     login.click()
 
 
-# Test case: Login functionality
+
 def test_login(appium_driver):
     driver = appium_driver
     time.sleep(3)
@@ -48,7 +48,7 @@ def test_login(appium_driver):
     password.click()
     password.send_keys("rrrrrr")
 
-    # Press the back button
+
     driver.press_keycode(4)
 
     login_button = driver.find_element(
@@ -59,14 +59,13 @@ def test_login(appium_driver):
     time.sleep(5)
 
 
-# Test case: Verify dashboard after login
 def test_dashboard(appium_driver):
     driver = appium_driver
     dashboard = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Saqib,")')
     assert dashboard.is_displayed()
 
 
-# Test case: Logout functionality
+
 def test_logout(appium_driver):
     driver = appium_driver
     settings = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Settings")')
