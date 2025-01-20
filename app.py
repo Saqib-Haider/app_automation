@@ -37,17 +37,21 @@ password = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().t
 password.click()
 password.send_keys("rrrrrr")
 
-login = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Log in")'))
-)
-login.click()
-time.sleep(5)
 
+driver.press_keycode(4)
+
+login_button = driver.find_element(
+    AppiumBy.ANDROID_UIAUTOMATOR,
+    'new UiSelector().text("Log in").className("android.widget.TextView").index(0)'
+)
+login_button.click()
+time.sleep(5)
+'''
 update = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Go to store")')
 update.click()
 time.sleep(5)
 
-dashboard = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Good Evening,")')
+dashboard = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Saqib,")')
 assert dashboard.is_displayed()
 
 
@@ -59,6 +63,5 @@ logout = driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().tex
 logout.click()
 time.sleep(3)
 
-
-# Close the session
+'''
 driver.quit()
