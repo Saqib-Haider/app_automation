@@ -7,10 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
-# Fixture to set up and tear down the Appium driver
+
 @pytest.fixture(scope="module")
 def appium_driver():
-    # Set up the options for Appium v2
     options = UiAutomator2Options()
     options.set_capability('platformName', 'Android')
     options.set_capability('platformVersion', '10')
@@ -20,10 +19,9 @@ def appium_driver():
     options.set_capability('noReset', True)
     options.set_capability('automationName', 'UiAutomator2')
 
-    # Initialize the driver
     driver = webdriver.Remote('http://192.168.4.24:4723', options=options)
-    yield driver  # Provide the driver to the tests
-    driver.quit()  # Quit the driver after the tests are done
+    yield driver 
+    driver.quit()
 
 
 # Test case: Navigate to the login page
