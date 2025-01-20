@@ -279,4 +279,4 @@ For any questions or feedback, reach out to:
 
 ---
 
-This README provides all the necessary information to set up, run, and contribute to the project. You can customize it further with your repository details or additional instructions. 😊
+This README provides all the necessary information to set up and run, the project.😊
