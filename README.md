@@ -1,6 +1,6 @@
 # app_automation
 
-This project automates the testing of a mobile application Bree using **Appium**, **Python**, and **pytest**. The tests include scenarios like navigation, login, dashboard validation, and logout.
+This project automates the testing of a mobile application Bree using **Appium** and **Python**. The tests include scenarios like navigation, login, dashboard validation, and logout.
 
 ---
 
@@ -57,29 +57,16 @@ appium
 
 ## 🧪 Running Tests
 
-This project uses **pytest** for running test cases.
-
 ### Run All Tests
 ```bash
-pytest --html=report.html
+python app.py
 ```
-
-### Generate HTML Reports
-Make sure you have the `pytest-html` plugin installed:
-```bash
-pip install pytest-html
-```
-The HTML reports will be generated in the specified file (e.g., `report.html`).
-
----
 
 
 ## 🌟 Key Features
 
 - Automated testing for Android applications.
 - Uses **Appium** for mobile app interaction.
-- Tests are structured with **pytest** for better modularity and scalability.
-- Supports detailed HTML test reports.
 
 ---
 
